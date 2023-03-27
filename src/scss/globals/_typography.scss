@@ -1,0 +1,18 @@
+@use '../util' as u;
+
+h1{
+    font-size: clamp(u.rem(28), u.rem(16) + 2vw, u.rem(40));
+}
+
+h2{
+    font-size: clamp(u.rem(22), u.rem(14) + 2vw, u.rem(36));
+}
+
+p{
+    margin: 0.15rem;
+    font-size: u.rem(16);
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+}

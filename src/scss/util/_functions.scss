@@ -1,0 +1,19 @@
+@use 'sass:math';
+
+@function rem($pixel){
+    @if math.is-unitless($pixel) {
+        $result : math.div($pixel, 16);
+        @return $result + rem;
+    } @else {
+        @error 'unit is included, only number as parameter is allowed';
+    }
+}
+
+@function em($pixel){
+    @if math.is-unitless($pixel) {
+        $result : math.div($pixel, 16);
+        @return $result + em;
+    } @else {
+        @error 'unit is included, only number as parameter is allowed';
+    }
+}
