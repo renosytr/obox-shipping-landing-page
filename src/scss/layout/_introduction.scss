@@ -1,0 +1,73 @@
+@use '../util' as u;
+@import '../util';
+
+.introduction{
+    @include container;
+
+    margin: 5rem 0;
+    display: flex;
+
+    &__title{
+        width: 30%;
+        
+        .main-title{
+            font-family: 'Rubik-SemiBold';
+            font-size: u.rem(32);
+            color: var(--darkdeep-blue);
+        }
+
+        .sub-title{
+            margin-bottom: 1rem;
+            font-family: 'Rubik-Regular';
+            padding: 0.25rem 1.25rem;
+            font-size: u.rem(14);
+            color: var(--darkdeep-blue);
+            width: min-content;
+            white-space: nowrap;
+            border-left: 3px solid var(--yellow-gold);
+            background-color: var(--gray);
+        }
+    }
+
+    &__body{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .part{
+            display: flex;
+
+            .item{
+                margin: 1rem 0;
+                display: flex;
+
+                .wrapper{
+                    width: 120px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-right: 1px solid var(--gray);
+                }
+
+                .text{
+                    padding: 0 1rem;
+                    max-width: 250px;
+
+                    .title{
+                        font-size: u.rem(18);
+                        font-family: 'Rubik-SemiBold';
+                        margin-bottom: 1rem;
+                        color: var(--darkdeep-blue);
+                    }
+
+                    .description{
+                        font-family: 'Krub-Medium';
+                        font-size: u.rem(14);
+                        color: var(--darkdeep-blue);
+                    }
+                }
+            }
+        }
+    }
+}

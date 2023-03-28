@@ -1,0 +1,132 @@
+@use '../util' as u;
+@import '../util';
+
+.header{
+    position: relative;
+    display: flex;
+    
+    &__menu{
+        @include container;
+
+        position: absolute;
+        z-index: 2;
+        height: 10vh;
+        min-height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: 'Krub-SemiBold';
+        font-size: u.rem(14);
+        overflow: hidden;
+
+        ul{
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+            li{
+                margin-right: 1rem;
+
+                a, a:visited, a:active {
+                    color: var(--white)
+                 }
+             
+                 a:hover{
+                     color: var(--yellow-gold)
+                 }
+            }
+            .border{
+                padding-right: 2rem;
+                border-right: 1px solid var(--white);
+            }
+
+            .promo{
+                background-color: var(--white);
+                padding: 2.5rem;
+
+                a, a:visited, a:active {
+                    color: var(--dark-blue);
+                }
+            }
+        }
+    }
+
+    &__menubg{
+        position: absolute;
+        background-color: var(--dark-blue);
+        width: 100%;
+        height: 10vh;
+        min-height: 75px;
+        z-index: 1;
+        opacity: 0.5;
+    }
+
+    &__content{
+        display: flex;
+        position: relative;
+        width: 100%;
+
+        .text{
+            @include container;
+            
+            position: absolute;
+            z-index: 1;
+            width: 50%;
+            top: 25%;
+
+            .main-title{
+                font-family: 'Rubik-Bold';
+                font-size: u.rem(36);
+                color: var(--white);
+            }
+
+            .sub-title{
+                font-family: 'Rubik-Regular';
+                padding: 0.25rem 1.25rem;
+                font-size: u.rem(14);
+                color: var(--white);
+                width: min-content;
+                white-space: nowrap;
+                border-left: 3px solid var(--yellow-gold);
+                background-color: rgb(9, 18, 66, .5);
+            }
+
+            .description{
+                color: var(--white);
+                font-family: 'Krub-Medium';
+                font-size: u.rem(14);
+                margin-top: 1rem;
+            }
+
+            .button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: nowrap;
+                width: 150px;
+                height: 50px;
+                margin-top: 1rem;
+                color: var(--black);
+                font-family: 'Krub-SemiBold';
+                background: rgb(255,182,41);
+                background: linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 35%, rgba(255,215,166,1) 100%);
+            }
+         }
+     
+         .background{
+             width: 100%;
+             position: relative;
+             z-index: 0;
+             overflow: hidden;
+     
+             img{
+                 height: 100%;
+                 width: 100%;
+                 background-size: cover;
+                 object-fit: cover;
+                 background-repeat: no-repeat;
+             }
+         }
+    }
+}

@@ -1,7 +1,9 @@
+@use '../util' as u;
 @import '../util';
 
 .navbar{
     @include container;
+    
     background-color: var(--dark-blue);
     color: var(--white);
     height: 20vh;
@@ -10,13 +12,17 @@
     align-items: center;
     justify-content: space-between;
 
+    a, a:visited, a:active {
+        color: var(--white)
+     }
+
     &__logo{
         display: flex;
         align-items: center;
         
         h1{
             margin: 0 0.75rem;
-            font-size: 1.5rem;
+            font-size: u.rem(20);
             font-family: 'Rubik-SemiBold';
         }
     }
@@ -24,10 +30,11 @@
     &__body{
         display: flex;
 
-        .clock{
+        .item{
             display: flex;
             align-items: center;
             font-family: 'Krub-Medium';
+            margin-left: 0.75rem;
 
             .schedule{
                 margin-left: 0.75rem;
