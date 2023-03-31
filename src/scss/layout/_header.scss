@@ -100,6 +100,8 @@
             }
 
             .button{
+                position: relative;
+                overflow: hidden;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -111,6 +113,17 @@
                 font-family: 'Krub-SemiBold';
                 background: rgb(255,182,41);
                 background: linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 35%, rgba(255,215,166,1) 100%);
+
+                .circle{
+                    position: absolute;
+                    bottom: -1.5rem;
+                    right: -1rem;
+                    width: 48px;
+                    height: 48px;
+                    background-color: var(--white);
+                    border-radius: 100%;
+                    opacity: 0.5;
+                }
             }
          }
      

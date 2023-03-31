@@ -1,0 +1,84 @@
+@use '../util' as u;
+@import '../util';
+
+.transporter{
+    @include container;
+    margin: 4rem 0;
+    &__head{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .main-title{
+            font-family: 'Rubik-SemiBold';
+            font-size: u.rem(32);
+            color: var(--darkdeep-blue);
+        }
+    
+        .sub-title{
+            margin-bottom: 1rem;
+            font-family: 'Rubik-Regular';
+            padding: 0.25rem 1.25rem;
+            font-size: u.rem(14);
+            color: var(--darkdeep-blue);
+            width: min-content;
+            white-space: nowrap;
+            border-left: 3px solid var(--yellow-gold);
+            background-color: var(--gray);
+        }
+    }
+
+    &__body{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 3rem;
+        margin: 2rem 0;
+
+        .part{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .avatar{
+                width: 100%;
+                height: 100%;
+            }
+
+            .description{
+                position: relative;
+                background-color: var(--darkdeep-blue);
+                padding: 2rem;
+
+                .media-social{
+                    position: absolute;
+                    right: 0;
+                    top: -1rem;
+                    width: min-content;
+                    display: flex;
+                    align-items: center;
+                    padding: 0.5rem 1rem;
+                    background: rgb(255,182,41);
+                    background: linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 35%, rgba(255,215,166,1) 100%);
+
+                    .mid-img{
+                        margin: 0 0.75rem;
+                    }
+                }
+
+                .name{
+                    font-family: 'Rubik-Medium';
+                    font-size: u.rem(16);
+                    color: var(--white);
+                }
+
+                p{
+                    font-family: 'Rubik-Regular';
+                    font-size: u.rem(14);
+                    color: var(--white);
+                    margin: 0.5rem 0;
+                }
+            }
+        }
+    }
+
+}

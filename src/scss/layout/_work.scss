@@ -1,0 +1,99 @@
+@use '../util' as u;
+@import '../util';
+
+.work{
+    position: relative;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+
+    &__title{
+        font-family: 'Rubik-SemiBold';
+        font-size: u.rem(32);
+        color: var(--darkdeep-blue);
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__body{
+        @include container;
+
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 1rem;
+
+        .part{
+            margin: 2rem 0;
+            position: relative;
+            display: flex;
+
+            .item{
+                position: absolute;
+                z-index: 1;
+                bottom: 1rem;
+                left: 1rem;
+
+                .main-title{
+                    font-family: 'Rubik-Medium';
+                    font-size: u.rem(16);
+                    color: var(--white);
+                }
+
+                .sub-title{
+                    font-family: 'Krub-Medium';
+                    font-size: u.rem(14);
+                    color: var(--yellow-gold);
+                }
+            }
+
+            img{
+                position: relative;
+                z-index: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    &__button{
+        position: relative;
+        z-index: 1;
+        width: 150px;
+        height: 50px;
+        margin: auto;
+        font-family: 'Krub-SemiBold';
+        font-size: u.rem(14);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--darkdeep-blue);
+        overflow: hidden;
+
+        a{
+            white-space: nowrap;
+            color: var(--white);
+        }
+
+        .circle{
+            position: absolute;
+            bottom: -1.5rem;
+            right: -1rem;
+            width: 48px;
+            height: 48px;
+            background-color: var(--white);
+            border-radius: 100%;
+            opacity: 0.25;
+        }
+    }
+
+    &__background{
+        position: absolute;
+        z-index: 0;
+        bottom: -6rem;
+        width: 100%;
+        height: 250px;
+        background: rgb(255,182,41);
+        background: linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 35%, rgba(255,215,166,1) 100%);
+    }
+}

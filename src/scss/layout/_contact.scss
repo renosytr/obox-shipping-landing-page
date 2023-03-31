@@ -1,0 +1,155 @@
+@use '../util' as u;
+@import '../util';
+
+.contact{
+    @include container;
+
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+
+    &__head{
+        display: flex;
+        margin-bottom: 4rem;
+
+        .title{
+            width: 50%;
+            
+            .main-title{
+                font-family: 'Rubik-SemiBold';
+                font-size: u.rem(32);
+                margin-bottom: 1rem;
+            }
+        
+            .sub-title{
+                margin-bottom: 1rem;
+                padding: 0.25rem 1.25rem;
+                font-family: 'Rubik-Regular';
+                font-size: u.rem(14);
+                width: min-content;
+                white-space: nowrap;
+                border-left: 3px solid var(--yellow-gold);
+                background-color: rgb(235, 235, 235, 0.10);
+            }
+
+            .description{
+                margin-bottom: 2rem;
+                font-family: 'Krub-Medium';
+                font-size: u.rem(14);
+            }
+
+            .part{
+                font-family: 'Krub-Medium';
+                font-size: u.rem(14);
+
+                .item{
+                    display: flex;
+                    align-items: center;
+                    margin: 1rem 0;
+
+                    .text{
+                        margin: 0 1rem;
+                    }
+                }
+            }
+        }
+
+        form{
+            width: 50%;
+            font-family: 'Rubik-Regular';
+            font-size: u.rem(14);
+
+            ::placeholder { 
+                color: var(--white);
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            input[type=number] {
+                -moz-appearance: textfield;
+            }
+
+            .form-group{
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 1rem;
+                margin-bottom: 1rem;
+
+                .input-form{
+                    width: 100%;
+                    padding: 1rem;
+                    color: var(--white);
+                    background-color: var(--dark-blue);
+                    border: 1px solid var(--white);
+                    border-radius: 0.25rem;
+                    
+                }
+
+                .input-form:focus{
+                    outline: 2px solid var(--yellow-gold);
+                }
+
+                .left{
+                    margin-right: 1rem;
+                }
+            }
+            
+            textarea{
+                width: 100%;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                color: var(--white);
+                background-color: var(--dark-blue);
+                border: 1px solid var(--white);
+                border-radius: 0.25rem;
+            }
+
+            textarea:focus{
+                outline: 2px solid var(--yellow-gold);
+            }
+
+            button{
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: nowrap;
+                width: 150px;
+                height: 50px;
+                margin-top: 1rem;
+                color: var(--black);
+                font-family: 'Krub-SemiBold';
+                background: rgb(255,182,41);
+                background: linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 35%, rgba(255,215,166,1) 100%);
+                border: none;
+                cursor: pointer;
+
+                .circle{
+                    position: absolute;
+                    bottom: -1.5rem;
+                    right: -1rem;
+                    width: 48px;
+                    height: 48px;
+                    background-color: var(--white);
+                    border-radius: 100%;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    &__body{
+        width: 100%;
+        display: flex;
+
+        img{
+            width: 25%;
+        }
+    }
+}
