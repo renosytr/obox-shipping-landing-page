@@ -41,6 +41,26 @@
                 border-right: 1px solid var(--white);
             }
 
+        }
+
+        .social-media{
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+            li{
+                margin-right: 1rem;
+
+                svg{
+                    fill: var(--white)
+                }
+
+                svg:hover{
+                    fill: var(--yellow-gold)
+                }
+            }
+
             .promo{
                 background-color: var(--white);
                 padding: 2.5rem;
@@ -114,8 +134,14 @@
                 background: rgb(255,182,41);
                 background: linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 35%, rgba(255,215,166,1) 100%);
 
+                p{
+                    position: relative;
+                    z-index: 1;
+                }
+
                 .circle{
                     position: absolute;
+                    z-index: 0;
                     bottom: -1.5rem;
                     right: -1rem;
                     width: 48px;
@@ -123,6 +149,14 @@
                     background-color: var(--white);
                     border-radius: 100%;
                     opacity: 0.5;
+                    transition: 0.3s;
+                }
+            }
+
+            .button:hover{
+                .circle{
+                    width: 72px;
+                    height: 72px;
                 }
             }
          }

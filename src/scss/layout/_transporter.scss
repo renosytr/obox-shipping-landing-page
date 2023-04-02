@@ -54,14 +54,20 @@
                     right: 0;
                     top: -1rem;
                     width: min-content;
-                    display: flex;
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    gap: 1rem;
                     align-items: center;
                     padding: 0.5rem 1rem;
                     background: rgb(255,182,41);
                     background: linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 35%, rgba(255,215,166,1) 100%);
 
-                    .mid-img{
-                        margin: 0 0.75rem;
+                    svg{
+                        fill: var(--darkdeep-blue)
+                    }
+    
+                    svg:hover{
+                        fill: var(--white)
                     }
                 }
 

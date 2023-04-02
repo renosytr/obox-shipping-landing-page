@@ -67,13 +67,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--darkdeep-blue);
+        color: var(--white);
+        background-color: var(--dark-blue);
         overflow: hidden;
-
-        a{
-            white-space: nowrap;
-            color: var(--white);
-        }
 
         .circle{
             position: absolute;
@@ -84,6 +80,14 @@
             background-color: var(--white);
             border-radius: 100%;
             opacity: 0.25;
+            transition: 0.3s;
+        }
+    }
+
+    &__button:hover{
+        .circle{
+            width: 72px;
+            height: 72px;
         }
     }
 

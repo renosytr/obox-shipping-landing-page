@@ -87,7 +87,6 @@
                     background-color: var(--dark-blue);
                     border: 1px solid var(--white);
                     border-radius: 0.25rem;
-                    
                 }
 
                 .input-form:focus{
@@ -130,8 +129,14 @@
                 border: none;
                 cursor: pointer;
 
+                p{
+                    position: relative;
+                    z-index: 1;
+                }
+
                 .circle{
                     position: absolute;
+                    z-index: 0;
                     bottom: -1.5rem;
                     right: -1rem;
                     width: 48px;
@@ -139,6 +144,14 @@
                     background-color: var(--white);
                     border-radius: 100%;
                     opacity: 0.5;
+                    transition: 0.3s;
+                }
+            }
+
+            button:hover{
+                .circle{
+                    width: 72px;
+                    height: 72px;
                 }
             }
         }

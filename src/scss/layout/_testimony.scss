@@ -36,18 +36,60 @@
             height: min-content;
 
             .arrow-left{
+                display: flex;
+                position: relative;
                 margin-right: 1rem;
+                width: 45px;
+                height: 45px;
 
                 img{
+                    position: absolute;
                     height: 45px;
                     width: 45px;
+                }
+
+                .inactive{
+                    opacity: 1;
+                    transition: 0.3s;
+                }
+
+                .active{
+                    opacity: 0;
+                    transition: 0.3s;
                 }
             }
 
             .arrow-right{
+                display: flex;
+                position: relative;
+                width: 45px;
+                height: 45px;
+                
                 img{
+                    position: absolute;
                     height: 45px;
                     width: 45px;
+                }
+
+                .inactive{
+                    opacity: 1;
+                    transition: 0.3s;
+                }
+
+                .active{
+                    opacity: 0;
+                    transition: 0.3s;
+                }
+            }
+
+            
+            .arrow-right:hover, .arrow-left:hover{
+                .inactive{
+                    opacity: 0;
+                }
+
+                .active{
+                    opacity: 1;
                 }
             }
         }

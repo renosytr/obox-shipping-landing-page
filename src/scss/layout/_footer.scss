@@ -1,0 +1,174 @@
+@use '../util' as u;
+@import '../util';
+
+.footer{
+    background-color: var(--dark-blue);
+
+    &__background{
+        width: 100%;
+        height: 250px;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+
+        img{
+            height: 100%;
+            width: 100%;
+            background-size: contain;
+            object-fit: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__body{
+        padding-bottom: 2rem;
+        .menu{
+            @include container;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            align-items: center;
+            background-color: rgb(255, 255, 255, 0.25);
+            color: var(--white);
+
+            .logo{
+                display: flex;
+                padding: 1.5rem;
+                background-color: var(--dark-blue);
+                
+
+                .text{
+                    margin: 0 0.75rem;
+                    font-family: 'Rubik-SemiBold';
+                    font-size: u.rem(20);
+                }
+            }
+
+            .submenu{
+                padding: 1.5rem;
+                font-family: 'Rubik-Medium';
+                font-size: u.rem(14);
+            }
+        }
+        
+        .content{
+            @include container;
+            display: flex;
+            margin-top: 2rem;
+            
+
+            .description{
+                width: 35%;
+                
+                p{
+                    margin-bottom: 1rem;
+                    color: var(--white);
+                    font-family: 'Krub-Medium';
+                    font-size: u.rem(14);
+                }
+
+                .item{
+                    display: flex;
+                    align-items: center;
+                    margin: 1rem 0;
+
+                    .text{
+                        margin: 0 1rem;
+
+                        p{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .footer-submenu{
+                width: 22%;
+                padding: 0;
+
+                ul{
+                    list-style: none;
+                    font-family: 'Krub-Medium';
+                    font-size: u.rem(14);
+                    padding: 0 1.25rem;
+                    margin: 0;
+
+                    li{
+                        margin-bottom: 1rem;
+                        
+                        a, a:visited, a:active {
+                            color: var(--white)
+                         }
+                     
+                         a:hover{
+                             color: var(--yellow-gold)
+                         }
+                    }
+                }
+            }
+
+            .subscribe-submenu{
+                ::placeholder { 
+                    color: var(--white);
+                }
+
+                .input-form{
+                    width: 100%;
+                    padding: 1rem;
+                    color: var(--white);
+                    background-color: var(--dark-blue);
+                    border: 1px solid var(--white);
+                    border-radius: 0.25rem;
+                }
+
+                .input-form:focus{
+                    outline: 2px solid var(--yellow-gold);
+                }
+
+                ul{
+                    margin: 1rem 0;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    list-style: none;
+
+                    li{
+                        .send-button{
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            padding: 1rem;
+                            border: none;
+                            font-family: 'Krub-Medium';
+                            font-size: u.rem(14);
+                            background: rgb(255,182,41);
+                            background: linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 35%, rgba(255,215,166,1) 100%);
+                        }
+
+                        svg{
+                            fill: var(--white)
+                        }
+        
+                        svg:hover{
+                            fill: var(--yellow-gold)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__foot{
+        @include container;
+
+        border-top: 1px solid #7e7e7e;
+
+        .text{
+            color: var(--white);
+            padding: 2rem 0;
+            font-family: 'Krub-Medium';
+            font-size: u.rem(14);
+        }
+    }
+}
