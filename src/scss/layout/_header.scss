@@ -68,6 +68,10 @@
                 a, a:visited, a:active {
                     color: var(--dark-blue);
                 }
+
+                a:hover{
+                    color: var(--yellow-gold);
+                }
             }
         }
     }

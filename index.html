@@ -8,10 +8,11 @@
     <meta name="keywords" content="portofolio, landing page, company profile, news portal, blog">
     <title>Obox Shipping - Portofolio Landing Page</title>
     <link rel="stylesheet" href="src/css/main.min.css">
+    <script src="/src/js/main.js"></script>
 </head>
 <body>
     <!-- navbar start -->
-    <nav class="navbar">
+    <nav id="home" class="navbar">
         <div class="navbar__logo">
             <a href="/">
                 <img src="/src/img/icon/logo.svg" alt="logo obox shipping">
@@ -46,15 +47,23 @@
     </nav>
     <!-- navbar end -->
 
+    <!-- back to top start -->
+    <a href="" onclick="scrollToDiv('home')" class="fixedbutton">
+        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 6L6 1L11 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>            
+    </a>
+    <!-- back to top end -->
+
     <!-- header start -->
     <header class="header">
         <div class="header__menu">
             <ul>
-                <li class="border"><a href="/">Home</a></li>
-                <li class="border"><a href="/about.html">About</a></li>
-                <li class="border"><a href="/">Page</a></li>
-                <li class="border"><a href="/">Project</a></li>
-                <li><a href="/">Contact</a></li>
+                <li class="border"><a href="/" onclick="scrollToDiv('home')">Home</a></li>
+                <li class="border"><a href="/" onclick="scrollToDiv('about')">About</a></li>
+                <li class="border"><a href="/" onclick="scrollToDiv('project')">Project</a></li>
+                <li class="border"><a href="/" onclick="scrollToDiv('testimony')">Testimony</a></li>
+                <li><a href="/" onclick="scrollToDiv('contact')">Contact</a></li>
             </ul>
             <ul class="social-media">
                 <li>
@@ -95,7 +104,7 @@
                 <div class="sub-title">Logistics & Shipping Solutions</div>
                 <div class="main-title">Your Gateway to any Box Shipping in the World</div>
                 <div class="description">In augue ligula, feugiat ut nulla consequat. Ut est lacus, molestie in arcu no, iaculis vehicula ipsum. Nunc faucibus, nisl id dapibus finibus, enim diam interdum nulla, sed laoreet risus lectus.</div>
-                <a href="/" class="button">
+                <a href="/" onclick="scrollToDiv('choose')" class="button">
                     <p>Explore More</p>
                     <div class="circle"></div>
                 </a>
@@ -108,7 +117,7 @@
     <!-- header end -->
     
     <!-- section what we do start -->
-    <section class="introduction">
+    <section id="about" class="introduction">
         <div class="introduction__title">
             <div class="sub-title">What We Do</div>
             <div class="main-title">Safe & Reliable</div>
@@ -203,7 +212,7 @@
     <!-- section why us end -->
     
     <!-- article why us start -->
-    <article class="work">
+    <article id="project" class="work">
         <div class="work__title">Transporting Across The World</div>
         <div class="work__body">
             <div class="part">
@@ -251,75 +260,216 @@
     <!-- article why us end -->
 
     <!-- section testimony start -->
-    <section class="testimony">
+    <section id="testimony" class="testimony">
         <div class="testimony__head">
             <div class="part">
                 <div class="sub-title">Why Us</div>
                 <div class="main-title">We provide full range global</div>
             </div>
             <div class="arrow">
-                <a href="/" class="arrow-left">
+                <a href="/" onclick="prevSlide()" class="arrow-left">
                     <img src="/src/img/icon/arrow-left.svg" class="inactive" alt="arrow left">
                     <img src="/src/img/icon/arrow-left-active.svg" class="active" alt="arrow left">
                 </a>
-                <a href="/" class="arrow-right">
+                <a href="/" onclick="nextSlide()" class="arrow-right">
                     <img src="/src/img/icon/arrow-right.svg"class="inactive" alt="arrow right">
                     <img src="/src/img/icon/arrow-right-active.svg"class="active" alt="arrow right">
                 </a>
             </div>
         </div>
         <div class="testimony__body">
-            <div class="part-left">
-                <div class="head">
-                    <div class="user">
-                        <img src="/src/img/avatar/person-empty.webp" alt="user avatar">
-                        <div class="text">
-                            <div class="name">Kathleen Smith</div>
-                            <div class="title">Fuel Company</div>
+            <ul id="slides-container" class="slides-container">
+                <li class="slide">
+                    <div class="part-left">
+                        <div class="head">
+                            <div class="user">
+                                <img src="/src/img/avatar/person-1.webp" alt="user avatar">
+                                <div class="text">
+                                    <div class="name">Kathleen Smith</div>
+                                    <div class="title">Fuel Company</div>
+                                </div>
+                            </div>
+                            <img src="/src/img/icon/testimony.svg" alt="icon testimony">
+                        </div>
+                        <div class="body">
+                            <p>Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+                            <div class="foot">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                            </div>
                         </div>
                     </div>
-                    <img src="/src/img/icon/testimony.svg" alt="icon testimony">
-                </div>
-                <div class="body">
-                    <p>Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-                    <div class="foot">
-                        <img src="/src/img/icon/star.svg" alt="icon star">
-                        <img src="/src/img/icon/star.svg" alt="icon star">
-                        <img src="/src/img/icon/star.svg" alt="icon star">
-                        <img src="/src/img/icon/star.svg" alt="icon star">
-                        <img src="/src/img/icon/star.svg" alt="icon star">
-                    </div>
-                </div>
-            </div>
-            <div class="part-right">
-                <div class="head">
-                    <div class="user">
-                        <img src="/src/img/avatar/person-empty.webp" alt="user avatar">
-                        <div class="text">
-                            <div class="name">John Martin</div>
-                            <div class="title">Restoration Company</div>
+                    <div class="part-right">
+                        <div class="head">
+                            <div class="user">
+                                <img src="/src/img/avatar/person-2.webp" alt="user avatar">
+                                <div class="text">
+                                    <div class="name">John Martin</div>
+                                    <div class="title">Restoration Company</div>
+                                </div>
+                            </div>
+                            <img src="/src/img/icon/testimony.svg" alt="icon testimony">
+                        </div>
+                        <div class="body">
+                            <p>Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+                            <div class="foot">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                            </div>
                         </div>
                     </div>
-                    <img src="/src/img/icon/testimony.svg" alt="icon testimony">
-                </div>
-                <div class="body">
-                    <p>Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-                    <div class="foot">
-                        <img src="/src/img/icon/star.svg" alt="icon star">
-                        <img src="/src/img/icon/star.svg" alt="icon star">
-                        <img src="/src/img/icon/star.svg" alt="icon star">
-                        <img src="/src/img/icon/star.svg" alt="icon star">
-                        <img src="/src/img/icon/star.svg" alt="icon star">
+                </li>
+                <li class="slide">
+                    <div class="part-left">
+                        <div class="head">
+                            <div class="user">
+                                <img src="/src/img/avatar/person-3.webp" alt="user avatar">
+                                <div class="text">
+                                    <div class="name">Eliodoro Shirou</div>
+                                    <div class="title">Fuel Company</div>
+                                </div>
+                            </div>
+                            <img src="/src/img/icon/testimony.svg" alt="icon testimony">
+                        </div>
+                        <div class="body">
+                            <p>Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+                            <div class="foot">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            </div>
+                    <div class="part-right">
+                        <div class="head">
+                            <div class="user">
+                                <img src="/src/img/avatar/person-empty.webp" alt="user avatar">
+                                <div class="text">
+                                    <div class="name">Suad Cosmin</div>
+                                    <div class="title">Restoration Company</div>
+                                </div>
+                            </div>
+                            <img src="/src/img/icon/testimony.svg" alt="icon testimony">
+                        </div>
+                        <div class="body">
+                            <p>Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+                            <div class="foot">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="slide">
+                    <div class="part-left">
+                        <div class="head">
+                            <div class="user">
+                                <img src="/src/img/avatar/person-empty.webp" alt="user avatar">
+                                <div class="text">
+                                    <div class="name">Ekkehard Sigimar</div>
+                                    <div class="title">Fuel Company</div>
+                                </div>
+                            </div>
+                            <img src="/src/img/icon/testimony.svg" alt="icon testimony">
+                        </div>
+                        <div class="body">
+                            <p>Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+                            <div class="foot">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-right">
+                        <div class="head">
+                            <div class="user">
+                                <img src="/src/img/avatar/person-empty.webp" alt="user avatar">
+                                <div class="text">
+                                    <div class="name">Hibiki Goibniu</div>
+                                    <div class="title">Restoration Company</div>
+                                </div>
+                            </div>
+                            <img src="/src/img/icon/testimony.svg" alt="icon testimony">
+                        </div>
+                        <div class="body">
+                            <p>Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+                            <div class="foot">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="slide">
+                    <div class="part-left">
+                        <div class="head">
+                            <div class="user">
+                                <img src="/src/img/avatar/person-empty.webp" alt="user avatar">
+                                <div class="text">
+                                    <div class="name">Pero Konstantin</div>
+                                    <div class="title">Fuel Company</div>
+                                </div>
+                            </div>
+                            <img src="/src/img/icon/testimony.svg" alt="icon testimony">
+                        </div>
+                        <div class="body">
+                            <p>Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+                            <div class="foot">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-right">
+                        <div class="head">
+                            <div class="user">
+                                <img src="/src/img/avatar/person-empty.webp" alt="user avatar">
+                                <div class="text">
+                                    <div class="name">Gotam Dario</div>
+                                    <div class="title">Restoration Company</div>
+                                </div>
+                            </div>
+                            <img src="/src/img/icon/testimony.svg" alt="icon testimony">
+                        </div>
+                        <div class="body">
+                            <p>Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+                            <div class="foot">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                                <img src="/src/img/icon/star.svg" alt="icon star">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
     <!-- section testimony end -->
 
     <!-- section choose start -->
-    <section class="choose">
+    <section id="choose" class="choose">
         <div class="choose__body">
             <div class="illustration">
                 <div class="button">
@@ -460,7 +610,7 @@
     <!-- section transporter end -->
 
     <!-- section contact start -->
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="contact__head">
             <div class="title">
                 <div class="sub-title">Contact</div>
@@ -518,7 +668,7 @@
     <!-- section contact end -->
 
     <!-- article blog start -->
-    <article class="blog">
+    <article id="blog" class="blog">
         <div class="blog__head">
             <div class="sub-title">Our Blog</div>
             <div class="main-title">Our Latest News</div>

@@ -90,6 +90,10 @@
                     font-size: u.rem(24);
                     color: var(--darkdeep-blue);
                 }
+
+                .news-title:hover{
+                    color: var(--yellow-gold);
+                }
     
                 .news-description{
                     color: var(--darkdeep-blue);
