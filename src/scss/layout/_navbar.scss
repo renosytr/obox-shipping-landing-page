@@ -12,6 +12,13 @@
     align-items: center;
     justify-content: space-between;
 
+    @include u.breakpoint-down(medium){
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
     a, a:visited, a:active {
         color: var(--white)
     }
@@ -19,6 +26,10 @@
     &__logo{
         display: flex;
         align-items: center;
+
+        @include u.breakpoint-down(medium){
+            margin: 1rem 0;
+        }
         
         h1{
             margin: 0 0.75rem;
@@ -29,6 +40,10 @@
 
     &__body{
         display: flex;
+
+        @include u.breakpoint-down(medium){
+            display: none;
+        }
 
         .item{
             display: flex;
