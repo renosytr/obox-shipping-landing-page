@@ -13,6 +13,11 @@
         text-align: center;
         position: relative;
         z-index: 1;
+
+        @include u.breakpoint-down(medium){
+            width: 80%;
+            margin: auto;
+        }
     }
 
     &__body{
@@ -24,6 +29,10 @@
         grid-template-columns: auto auto auto auto auto;
         gap: 1rem;
 
+        @include u.breakpoint-down(medium){
+            grid-template-columns: auto;
+        }
+
         .part{
             margin: 2rem 0;
             position: relative;
@@ -34,6 +43,13 @@
                 z-index: 1;
                 bottom: 1rem;
                 left: 1rem;
+
+                @include u.breakpoint-down(medium){
+                    width: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    text-align: center;
+                }
 
                 .main-title{
                     font-family: 'Rubik-Medium';

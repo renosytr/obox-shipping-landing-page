@@ -19,11 +19,19 @@
         font-size: u.rem(14);
         overflow: hidden;
 
+        @include u.breakpoint-down(medium){
+            padding-right: 0;
+        }
+
         ul{
             padding: 0;
             list-style: none;
             display: flex;
             align-items: center;
+
+            @include u.breakpoint-down(medium){
+                display: none;
+            }
 
             li{
                 margin-right: 1rem;
@@ -49,6 +57,11 @@
             display: flex;
             align-items: center;
 
+            @include u.breakpoint-down(medium){
+                width: 100%;
+                justify-content: space-between;
+            }
+
             li{
                 margin-right: 1rem;
 
@@ -64,6 +77,12 @@
             .promo{
                 background-color: var(--white);
                 padding: 2.5rem;
+                margin-right: 0;
+
+                @include u.breakpoint-down(medium){
+                    padding: 2rem;
+                    width: 150px;
+                }
 
                 a, a:visited, a:active {
                     color: var(--dark-blue);
@@ -91,13 +110,22 @@
         position: relative;
         width: 100%;
 
+        @include u.breakpoint-down(medium){
+            height: 100vh
+        }
+
         .text{
             @include container;
             
             position: absolute;
             z-index: 1;
             width: 50%;
-            top: 25%;
+            top: 20%;
+
+            @include u.breakpoint-down(medium){
+                width: 100%;
+                top: 25%;
+            }
 
             .main-title{
                 font-family: 'Rubik-Bold';
@@ -137,6 +165,10 @@
                 font-family: 'Krub-SemiBold';
                 background: rgb(255,182,41);
                 background: linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 35%, rgba(255,215,166,1) 100%);
+
+                @include u.breakpoint-down(medium){
+                    margin: 20% auto;
+                }
 
                 p{
                     position: relative;

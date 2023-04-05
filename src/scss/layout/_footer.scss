@@ -31,11 +31,18 @@
             background-color: rgb(255, 255, 255, 0.25);
             color: var(--white);
 
+            @include u.breakpoint-down(medium){
+                grid-template-columns: auto;
+            }
+
             .logo{
                 display: flex;
                 padding: 1.5rem;
                 background-color: var(--dark-blue);
                 
+                @include u.breakpoint-down(medium){
+                    justify-content: center;
+                }    
 
                 .text{
                     margin: 0 0.75rem;
@@ -48,6 +55,10 @@
                 padding: 1.5rem;
                 font-family: 'Rubik-Medium';
                 font-size: u.rem(14);
+                
+                @include u.breakpoint-down(medium){
+                    display: none;
+                }
             }
         }
         
@@ -55,16 +66,27 @@
             @include container;
             display: flex;
             margin-top: 2rem;
-            
+
+            @include u.breakpoint-down(medium){
+                flex-direction: column;
+            }
 
             .description{
-                width: 35%;
+                width: 75%;
+
+                @include u.breakpoint-down(medium){
+                    width: 100%;
+                }
                 
                 p{
                     margin-bottom: 1rem;
                     color: var(--white);
                     font-family: 'Krub-Medium';
                     font-size: u.rem(14);
+
+                    @include u.breakpoint-down(medium){
+                        margin-bottom: 2rem;
+                    }
                 }
 
                 .item{
@@ -82,32 +104,60 @@
                 }
             }
 
-            .footer-submenu{
-                width: 22%;
-                padding: 0;
+            .footer-active{
+                width: 100%;
+                display: flex;
+                
+                @include u.breakpoint-down(medium){
+                    justify-content: center;
+                }
 
-                ul{
-                    list-style: none;
-                    font-family: 'Krub-Medium';
-                    font-size: u.rem(14);
-                    padding: 0 1.25rem;
-                    margin: 0;
-
-                    li{
-                        margin-bottom: 1rem;
-                        
-                        a, a:visited, a:active {
-                            color: var(--white)
+                .footer-submenu{
+                    width: 45%;
+                    padding: 0;
+    
+                    @include u.breakpoint-down(medium){
+                        width: 35%;
+                        margin: 1rem 0;
+                    }
+    
+                    ul{
+                        list-style: none;
+                        font-family: 'Krub-Medium';
+                        font-size: u.rem(14);
+                        padding: 0 1.25rem;
+                        margin: 0;
+    
+                        @include u.breakpoint-down(medium){
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            padding: 0;
                          }
-                     
-                         a:hover{
-                             color: var(--yellow-gold)
-                         }
+    
+                        li{
+                            margin-bottom: 1rem;
+                            
+                            a, a:visited, a:active {
+                                color: var(--white)
+                             }
+                         
+                             a:hover{
+                                 color: var(--yellow-gold)
+                             }
+                        }
                     }
                 }
             }
 
             .subscribe-submenu{
+                width: 40%;
+
+                @include u.breakpoint-down(medium){
+                    width: 100%;
+                    margin: 1rem 0;
+                }
+
                 ::placeholder { 
                     color: var(--white);
                 }
@@ -134,6 +184,12 @@
                     align-items: center;
                     justify-content: space-between;
                     list-style: none;
+
+                    
+                    @include u.breakpoint-down(medium){
+                        margin: 2rem auto;
+                        width: 75%;
+                     }
 
                     li{
                         .send-button{
@@ -171,6 +227,10 @@
             padding: 2rem 0;
             font-family: 'Krub-Medium';
             font-size: u.rem(14);
+
+            @include u.breakpoint-down(medium){
+                text-align: center;
+            }
         }
     }
 }

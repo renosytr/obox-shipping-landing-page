@@ -41,12 +41,20 @@
             padding-bottom: 2rem;
             border-bottom: 1px solid var(--gray);
 
+            @include u.breakpoint-down(medium){
+                flex-direction: column;
+            }
+
             .illustration{
                 margin-right: 1rem;
                 width: 50%;
                 position: relative;
-                z-index: 0;
                 overflow: hidden;
+                z-index: 0;
+                
+                @include u.breakpoint-down(medium){
+                    width: 100%;
+                }
         
                 img{
                     height: 100%;
@@ -63,6 +71,12 @@
                 flex-direction: column;
                 align-items: center;
 
+                @include u.breakpoint-down(medium){
+                    flex-direction: row;
+                    justify-content: center;
+                    margin: 1rem;
+                }
+
                 img{
                     margin-bottom: 0.5rem;
                 }
@@ -71,6 +85,10 @@
                     color: var(--darkdeep-blue);
                     font-family: 'Rubik-SemiBold';
                     font-size: u.rem(32);
+
+                    @include u.breakpoint-down(medium){
+                        margin-left: 1rem;
+                    }
                 }
 
                 p{

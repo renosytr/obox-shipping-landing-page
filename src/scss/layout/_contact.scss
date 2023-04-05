@@ -13,8 +13,17 @@
         display: flex;
         margin-bottom: 4rem;
 
+        @include u.breakpoint-down(medium){
+            flex-direction: column;
+        }
+
         .title{
             width: 50%;
+
+            @include u.breakpoint-down(medium){
+                width: 100%;
+                margin-bottom: 2rem;
+            }
             
             .main-title{
                 font-family: 'Rubik-SemiBold';
@@ -59,6 +68,10 @@
             width: 50%;
             font-family: 'Rubik-Regular';
             font-size: u.rem(14);
+
+            @include u.breakpoint-down(medium){
+                width: 100%;
+            }
 
             ::placeholder { 
                 color: var(--white);
@@ -133,6 +146,10 @@
                 border: none;
                 cursor: pointer;
 
+                @include u.breakpoint-down(medium){
+                    margin: 2rem auto auto auto;
+                }
+
                 p{
                     position: relative;
                     z-index: 1;
@@ -165,8 +182,16 @@
         width: 100%;
         display: flex;
 
+        @include u.breakpoint-down(medium){
+            flex-direction: column;
+        }
+
         img{
             width: 25%;
+
+            @include u.breakpoint-down(medium){
+                width: 100%;
+            }
         }
     }
 }

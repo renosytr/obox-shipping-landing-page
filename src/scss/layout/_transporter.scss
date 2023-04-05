@@ -34,6 +34,10 @@
         gap: 3rem;
         margin: 2rem 0;
 
+        @include u.breakpoint-down(medium){
+            grid-template-columns: auto;
+        }
+
         .part{
             display: flex;
             flex-direction: column;
@@ -46,7 +50,7 @@
 
             .description{
                 position: relative;
-                background-color: var(--darkdeep-blue);
+                background-color: var(--dark-blue);
                 padding: 2rem;
 
                 .media-social{
@@ -63,7 +67,7 @@
                     background: linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 35%, rgba(255,215,166,1) 100%);
 
                     svg{
-                        fill: var(--darkdeep-blue)
+                        fill: var(--dark-blue)
                     }
     
                     svg:hover{

@@ -45,6 +45,27 @@
                 </div>
             </div>
         </div>
+        <div class="navbar__mobile-menu">
+            <a href="/" onclick="openMobileMenu(1)">
+                <svg width="36" height="36" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                    <path d="M768 306.2V383H256v-76.8h512zM256 536.6h512v-76.8H256v76.8zm0 153.6h512v-76.8H256v76.8z"/>
+                </svg>
+            </a>
+            <div class="popup-menu">
+                <a href="/" class="close" onclick="openMobileMenu(0)">
+                    <svg width="36" height="36" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                        <path d="M7.004 23.087l7.08-7.081-7.07-7.071L8.929 7.02l7.067 7.069L23.084 7l1.912 1.913-7.089 7.093 7.075 7.077-1.912 1.913-7.074-7.073L8.917 25z"/>
+                    </svg>
+                </a>
+                <ul>
+                    <li class="border"><a href="/" onclick="scrollToDiv('home')">Home</a></li>
+                    <li class="border"><a href="/" onclick="scrollToDiv('about')">About</a></li>
+                    <li class="border"><a href="/" onclick="scrollToDiv('project')">Project</a></li>
+                    <li class="border"><a href="/" onclick="scrollToDiv('testimony')">Testimony</a></li>
+                    <li><a href="/" onclick="scrollToDiv('contact')">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <!-- navbar end -->
 
@@ -778,23 +799,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer-submenu">
-                    <ul>
-                        <li><a href="/">About Us</a></li>
-                        <li><a href="/">Our Team</a></li>
-                        <li><a href="/">Our Project</a></li>
-                        <li><a href="/">Pricing</a></li>
-                        <li><a href="/">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-submenu">
-                    <ul>
-                        <li><a href="/">Style Guide</a></li>
-                        <li><a href="/">Change Log</a></li>
-                        <li><a href="/">Licenses</a></li>
-                        <li><a href="/">Protected</a></li>
-                        <li><a href="/">Not Found</a></li>
-                    </ul>
+                <div class="footer-active">
+                    <div class="footer-submenu">
+                        <ul>
+                            <li><a href="/">About Us</a></li>
+                            <li><a href="/">Our Team</a></li>
+                            <li><a href="/">Our Project</a></li>
+                            <li><a href="/">Pricing</a></li>
+                            <li><a href="/">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-submenu">
+                        <ul>
+                            <li><a href="/">Style Guide</a></li>
+                            <li><a href="/">Change Log</a></li>
+                            <li><a href="/">Licenses</a></li>
+                            <li><a href="/">Protected</a></li>
+                            <li><a href="/">Not Found</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="subscribe-submenu">
                     <form>

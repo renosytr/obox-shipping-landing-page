@@ -5,6 +5,7 @@ const scrollToDiv = (destination) => {
     const element = document.getElementById(destination);
     const yAxis = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
     window.scrollTo({top: yAxis, behavior: 'smooth'});
+    openMobileMenu(0)
 }
 
 // listening to window scroll
@@ -38,4 +39,14 @@ const nextSlide = () => {
     const slide = document.querySelector(".slide");
     const slideWidth = slide.clientWidth;
     slidesContainer.scrollLeft += slideWidth;
+}
+
+const openMobileMenu = (isOpen) => {
+    event.preventDefault()
+    const popupMenu = document.getElementsByClassName('popup-menu')
+    if (isOpen == 1) {
+        popupMenu[0].style.display = 'block'
+    } else {
+        popupMenu[0].style.display = 'none'
+    }
 }
