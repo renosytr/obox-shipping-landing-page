@@ -1,5 +1,7 @@
 # Obox Shipping
 
+![Obox Shipping](./src/img/obox-cover-readme.jpg)
+
 A minimal landing page website portofolio built only using vanilla HTML, CSS, and JavaScript. The CSS file is generated using Live Sass Compiler. The website uses Obox Shipping as the imaginary sample company name.
 
 ## Purpose
