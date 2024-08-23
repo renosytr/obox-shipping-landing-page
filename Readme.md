@@ -1,4 +1,4 @@
-# Obox Shipping
+# Obox Shipping Landing Page
 
 ![Obox Shipping](./src/img/obox-cover-readme.jpg)
 
